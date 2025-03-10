@@ -1,323 +1,271 @@
-body
-{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    font-family: sans-serif;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
-.header
-{
-    
-    grid-column: 1 / 13;
-    grid-row: 1 / 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
+.header {
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#clock
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    left: 2.5em;
-    
+#clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 2.5em;
 }
-#clock p
-{
-    padding:  0.4em 0.5em ;
-    margin: 0;
-    color: #7697b5a2;
-    font-weight: 800;
-    
-    
-
+#clock p {
+  padding: 0.4em 0.5em;
+  margin: 0;
+  color: #7697b5a2;
+  font-weight: 800;
 }
-#project-header
-{
-    background-color: #7697b5a2;
-    color: white;
-    font-family: monospace;
-    padding: 0.5em;
-    border-radius:40px ;
-    margin-bottom: -1em;
+#project-header {
+  background-color: #7697b5a2;
+  color: white;
+  font-family: monospace;
+  padding: 0.5em;
+  border-radius: 40px;
+  margin-bottom: -1em;
 }
-.header button
-{
-    margin: 1em;
-    border-style: none;
-    padding: 1em;
-    font-weight: 800;
-    font-size: 1em;
-    background-color: transparent;
-    cursor: pointer;
-    color: #7697b5a2;
+.header button {
+  margin: 1em;
+  border-style: none;
+  padding: 1em;
+  font-weight: 800;
+  font-size: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  color: #7697b5a2;
 }
-.header button:hover
-{
-    transform: scale(1.5);
+.header button:hover {
+  transform: scale(1.5);
 }
-#content
-{
-   
-    grid-column: 3 / 12;
-    grid-row: 2 / 12;
-    background-color: rgba(192, 199, 206, 0.11);
-    border-radius: 5%;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    
+#content {
+  grid-column: 3 / 12;
+  grid-row: 2 / 12;
+  background-color: rgba(192, 199, 206, 0.11);
+  border-radius: 5%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #floating-button {
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 10em; /* Adjust as needed */
-    left: 4.5em;
-    background-color:  #7697b5a2; /* Example color */
-    color: white;
-    border: none;
-    border-radius:30px; /* Make it circular */
-    width: 80px; /* Adjust size */
-    height: 80px; /* Adjust size */
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    transition: transform 0.2s ease-in-out; /* Smooth animation */
-  }
-  #new-project-button {
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 5em; /* Adjust as needed */
-    left: 4em; /* Adjust as needed */
-    background-color:  #7697b5a2; /* Example color */
-    color: white;
-    font-weight: 700;
-    border: none;
-    border-radius:50px; /* Make it circular */
-    width: 100px; /* Adjust size */
-    height: 50px; /* Adjust size */
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out; /* Smooth animation */
-  }
-  #new-project-button:hover {
-    transform: scale(1.1); 
-  
-    color: black;
-  }
-  #new-project-button:active {
-    transform: scale(0.95); 
-    transform: rotate(-0.05turn);
-  }
-  #floating-button:hover {
-    transform: scale(1.1); 
-    color: black;
-  }
-  
-  #floating-button:active {
-    transform: scale(0.95); 
-    transform: rotate(-0.05turn);
-  }
+  position: fixed; /* Fixed position relative to the viewport */
+  bottom: 10em; /* Adjust as needed */
+  left: 4.5em;
+  background-color: #7697b5a2; /* Example color */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Make it circular */
+  width: 80px; /* Adjust size */
+  height: 80px; /* Adjust size */
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+#new-project-button {
+  position: fixed; /* Fixed position relative to the viewport */
+  bottom: 5em; /* Adjust as needed */
+  left: 4em; /* Adjust as needed */
+  background-color: #7697b5a2; /* Example color */
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px; /* Make it circular */
+  width: 100px; /* Adjust size */
+  height: 50px; /* Adjust size */
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+#new-project-button:hover {
+  transform: scale(1.1);
 
-  .projects-menu
-{
-  
-    margin: 0 6.5em;
-    border-radius: 10px;
-    height: 100%;
-    grid-column: 1 /3;
-    grid-row: 2 /12;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}  
-
-.projects-menu button
-{
-    background-color: transparent;
-    font-weight: 700;
-    border-style: none;
-    padding-top: 2.5em;
+  color: black;
+}
+#new-project-button:active {
+  transform: scale(0.95);
+  transform: rotate(-0.05turn);
+}
+#floating-button:hover {
+  transform: scale(1.1);
+  color: black;
 }
 
-#projects-menu-list
-{
-    margin: 3em 0 0 0;
-    
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2.5em;
-}
-#projects-menu-list button
-{
-    font-size: 1.5em;
-    padding: 1em;
-    color: #7697b5a2;
-    cursor: pointer;
-
-}
-#projects-menu-list button:hover
-{
-    transform: scale(1.6);
-    transform: rotate(0.01turn);
-    color: black;
-}
-#projects-menu-list button:active
-{
-    transform: scale(0.95); 
-    
-}
-#content div
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3em;
+#floating-button:active {
+  transform: scale(0.95);
+  transform: rotate(-0.05turn);
 }
 
-#content div div 
-{
-    padding:0 1em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2em 2em ;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    border-radius: 20px;
-    margin: 0.5em 1em;
-    background-color: white;
-}
-#content div div span
-{
-    position:relative;
-    top: 50%;
-    left: 60%;
-    background-color: #91B7CA;
-    text-align: center;
-    color: white;
-    padding: 0.2em;
-    font-size: 12px;
-    font-weight: 800;
-    max-width: 30% ;
-    border-radius: 5px;
-
-}
-#content div div div
-{
-    position: relative;
-    bottom: 2em;
-    right: 3em;
-    display: flex;
-    align-items: flex-start;
-    font-size: 10px;
-    box-shadow: none;
-    width:9.5em ;
-    font-weight: 700;
-  
-
-}
-.label-date-hour
-{
- height: 1px;
+.projects-menu {
+  margin: 0 6.5em;
+  border-radius: 10px;
+  height: 100%;
+  grid-column: 1 /3;
+  grid-row: 2 /12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-label
-{
-    grid-row:  1 / 2;
-    font-weight: 800;
-    font-size: 10px;
-}
-.task-label
-{
-    grid-row: 2/3;
+.projects-menu button {
+  background-color: transparent;
+  font-weight: 700;
+  border-style: none;
+  padding-top: 2.5em;
 }
 
-#new-task-popup
-{
-    height: 30em;
-    width: 20em;
-    padding: 2em;
-    border-radius: 30px;
-    z-index: 1001;
-    overflow:hidden;
-    position: absolute;
-    top: 20%;
+#projects-menu-list {
+  margin: 3em 0 0 0;
 
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.5em;
 }
-#new-project-popup
-{
-    height: 30em;
-    width: 20em;
-    padding: 2em;
-    border-radius: 30px;
-    z-index: 1001;
-    overflow:hidden;
-    position: absolute;
-    top: 20%;
+#projects-menu-list button {
+  font-size: 1.5em;
+  padding: 1em;
+  color: #7697b5a2;
+  cursor: pointer;
+}
+#projects-menu-list button:hover {
+  transform: scale(1.6);
+  transform: rotate(0.01turn);
+  color: black;
+}
+#projects-menu-list button:active {
+  transform: scale(0.95);
+}
+#content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em;
+}
 
+#content div div {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2em 2em;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin: 0.5em 1em;
+  background-color: white;
+}
+#content div div span {
+  position: relative;
+  top: 50%;
+  left: 60%;
+  background-color: #91b7ca;
+  text-align: center;
+  color: white;
+  padding: 0.2em;
+  font-size: 12px;
+  font-weight: 800;
+  max-width: 30%;
+  border-radius: 5px;
+}
+#content div div div {
+  position: relative;
+  bottom: 2em;
+  right: 3em;
+  display: flex;
+  align-items: flex-start;
+  font-size: 10px;
+  box-shadow: none;
+  width: 9.5em;
+  font-weight: 700;
+}
+.label-date-hour {
+  height: 1px;
 }
 
+.card-label {
+  grid-row: 1 / 2;
+  font-weight: 800;
+  font-size: 10px;
+}
+.task-label {
+  grid-row: 2/3;
+}
 
-#newtaskForm
-{
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2em;
+#new-task-popup {
+  height: 30em;
+  width: 20em;
+  padding: 2em;
+  border-radius: 30px;
+  z-index: 1001;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
 }
-.dialog-inputs
-{
-    display: flex;
-    flex-direction: column;
-   
-    
+#new-project-popup {
+  height: 30em;
+  width: 20em;
+  padding: 2em;
+  border-radius: 30px;
+  z-index: 1001;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
 }
-.dialog-inputs label
-{
-    padding: 1em  0 0.2em 0; 
-    font-weight: 700;
-    font-size: 10px;
+
+#newtaskForm {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
 }
-.dialog-inputs input, select
-{
-    border-style: none;
-    border-radius: 10px ;
-    height: 20px;
-    width: 200px; 
-    
-    
+.dialog-inputs {
+  display: flex;
+  flex-direction: column;
 }
-.dialog-inputs, select
-{
-    width: 210px;
+.dialog-inputs label {
+  padding: 1em 0 0.2em 0;
+  font-weight: 700;
+  font-size: 10px;
 }
-.dialog-inputs select:focus
-{
-    transform: scale(1.1);
-    padding: 1em;
-    outline: none;
-    border: 2px solid #7697b5a2; ; 
-} 
-.dialog-inputs input:focus
-{
-   
-    transform: scale(1.1);
-    padding: 1em;
-    outline: none;
-    border: 2px solid #7697b5a2; ; 
+.dialog-inputs input,
+select {
+  border-style: none;
+  border-radius: 10px;
+  height: 20px;
+  width: 200px;
+}
+.dialog-inputs,
+select {
+  width: 210px;
+}
+.dialog-inputs select:focus {
+  transform: scale(1.1);
+  padding: 1em;
+  outline: none;
+  border: 2px solid #7697b5a2;
+}
+.dialog-inputs input:focus {
+  transform: scale(1.1);
+  padding: 1em;
+  outline: none;
+  border: 2px solid #7697b5a2;
 }
 /* 
 .dialog-inputs input:invalid
@@ -329,42 +277,33 @@ body
     border: 2px solid #dc3737a2; ; 
 } */
 
-#dialog-buttons 
-{
-    position:absolute;
-    top: 450px;
-    left: 45%;
-    
+#dialog-buttons {
+  position: absolute;
+  top: 450px;
+  left: 45%;
 }
-#dialog-buttons button
-{
-    border-style: none;
-    font-weight: 700;
-    margin: 1.5em 0.5em ;
-    padding: 1em;
+#dialog-buttons button {
+  border-style: none;
+  font-weight: 700;
+  margin: 1.5em 0.5em;
+  padding: 1em;
 }
 
-#confirmBtn
-{
-    background-color: #7697b5a2;
-    border-radius: 10px ;
-    
-   
+#confirmBtn {
+  background-color: #7697b5a2;
+  border-radius: 10px;
 }
 
-#cancelBtn
-{
-    background-color: transparent;
-   
+#cancelBtn {
+  background-color: transparent;
 }
-#overlay
-{
-    display: none;
-    position: fixed; 
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1000;
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
